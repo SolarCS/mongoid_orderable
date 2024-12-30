@@ -18,8 +18,8 @@ module Generators
 
             field :scope, type: String
 
-            index({ scope: 1 }, { unique: 1 })
-            index({ updated_at: 1 }, { expire_after_seconds: 86400 })
+            index({ scope: 1 }, unique: true)
+            index({ updated_at: 1 }, expire_after_seconds: 86400)
           end
         end
       KLASS
